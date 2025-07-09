@@ -297,8 +297,8 @@ function App() {
               }`}>
                 <img 
                   src={isDarkMode 
-                    ? "/src/assets/darkinsight.png" 
-                    : "/src/assets/insight.png"
+                    ? "/assets/darkinsight.png" 
+                    : "/assets/insight.png"
                   }
                   alt="Data Insights Dashboard showing parallel coordinates analysis"
                   className="w-full h-auto rounded-lg"
@@ -342,8 +342,8 @@ function App() {
               }`}>
                 <img 
                   src={isDarkMode 
-                    ? "/src/assets/darkefficiency.png" 
-                    : "/src/assets/efficiency.png"
+                    ? "/assets/darkefficiency.png" 
+                    : "/assets/efficiency.png"
                   }
                   alt="Simulation & Predictive Analysis interface showing Haber-Bosch process"
                   className="w-full h-auto rounded-lg"
@@ -493,8 +493,8 @@ function App() {
               }`}>
                 <img 
                   src={isDarkMode 
-                    ? "/src/assets/darksim.png" 
-                    : "/src/assets/Sim.png"
+                    ? "/assets/darksim.png" 
+                    : "/assets/Sim.png"
                   }
                   alt="Process Monitoring Dashboard showing Haber-Bosch process parameters"
                   className="w-full h-auto rounded-lg"
@@ -522,8 +522,8 @@ function App() {
               }`}>
                 <img 
                   src={isDarkMode 
-                    ? "/src/assets/darkconsole.png" 
-                    : "/src/assets/console.png"
+                    ? "/assets/darkconsole.png" 
+                    : "/assets/console.png"
                   }
                   alt="Console Log System showing system activities and optimization results"
                   className="w-full h-auto rounded-lg"
@@ -597,7 +597,7 @@ function App() {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-4 mb-6 animate-bounce-slow">
                 <img 
-                  src="/src/assets/darklogo.png" 
+                  src="/assets/darklogo.png" 
                   alt="ChemSafe AI Logo" 
                   className="h-10 w-auto transform transition-transform duration-300 hover:scale-110"
                 />
