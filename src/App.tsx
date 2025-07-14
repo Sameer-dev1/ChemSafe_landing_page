@@ -46,7 +46,7 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen transition-all duration-500 ${isDarkMode ? 'dark bg-gray-900' : 'bg-white'}`}>
+    <div className={`min-h-screen overflow-x-hidden transition-all duration-500 ${isDarkMode ? 'dark bg-gray-900' : 'bg-white'}`}>
       {/* Animated Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md py-3 px-3 md:py-4 md:px-6 transform transition-all duration-500 ${
         isScrolled 
@@ -74,7 +74,7 @@ function App() {
             </div>
           </div>
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             <nav className="flex space-x-4 lg:space-x-8 animate-slide-in-right">
               {[
                 { id: 'home', label: 'HOME' },
@@ -110,7 +110,7 @@ function App() {
             </button>
           </div>
           {/* Mobile Nav Toggle */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="flex lg:hidden items-center space-x-2">
             <button
               onClick={toggleDarkMode}
               className={`p-2 rounded-full transition-all duration-300 transform hover:scale-110 hover:rotate-12 shadow-lg ${
@@ -134,7 +134,7 @@ function App() {
         {/* Mobile Nav Drawer */}
         {mobileNavOpen && (
           <div
-            className={`fixed inset-0 z-50 flex flex-col bg-black/80`}
+            className={`fixed inset-0 z-50 flex flex-col bg-black/80 lg:hidden`}
             onClick={() => setMobileNavOpen(false)}
           >
             <div
@@ -191,7 +191,7 @@ function App() {
             <div className="shape shape-3"></div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center relative z-10">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl sm:text-5xl md:text-7xl font-black mb-4 md:mb-8 animate-fade-in-up bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
             REVOLUTIONIZING
           </h2>
@@ -252,13 +252,13 @@ function App() {
       </section>
 
       {/* Data Insights Section with Image */}
-      <section id="data-insights" className={`py-20 transition-all duration-500 ${
+      <section id="data-insights" className={`py-16 md:py-20 transition-all duration-500 ${
         isDarkMode 
           ? 'bg-gradient-to-br from-gray-800 to-gray-900' 
           : 'bg-gradient-to-br from-gray-50 to-blue-50'
       }`}>
         <SlideIn direction="left">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left">
               <div className="flex items-center mb-6">
@@ -328,13 +328,13 @@ function App() {
       </section>
 
       {/* Simulation Section with Image */}
-      <section id="simulation" className={`py-20 transition-all duration-500 ${
+      <section id="simulation" className={`py-16 md:py-20 transition-all duration-500 ${
         isDarkMode 
           ? 'bg-gradient-to-br from-gray-900 to-black' 
           : 'bg-gradient-to-br from-white to-purple-50'
       }`}>
         <SlideIn direction="right">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left order-2 lg:order-1">
               <div className={`p-6 shadow-2xl rounded-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-3xl hover:-rotate-1 relative group ${
@@ -397,13 +397,13 @@ function App() {
       </section>
 
       {/* Process Monitoring Section with Image */}
-      <section id="monitoring" className={`py-20 transition-all duration-500 ${
+      <section id="monitoring" className={`py-16 md:py-20 transition-all duration-500 ${
         isDarkMode 
           ? 'bg-gradient-to-br from-red-900/50 to-gray-900' 
           : 'bg-gradient-to-br from-red-50 to-orange-50'
       }`}>
         <SlideIn direction="up">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left">
               <div className="flex items-center mb-6">
@@ -508,13 +508,13 @@ function App() {
       </section>
 
       {/* Console Logs Section with Image */}
-      <section id="console" className={`py-20 transition-all duration-500 ${
+      <section id="console" className={`py-16 md:py-20 transition-all duration-500 ${
         isDarkMode 
           ? 'bg-gradient-to-br from-black to-gray-900' 
           : 'bg-gradient-to-br from-gray-900 to-black'
       } text-white`}>
         <SlideIn direction="down">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-in-left order-2 lg:order-1">
               <div className={`p-6 shadow-2xl rounded-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-3xl hover:-rotate-1 border relative group ${
@@ -592,7 +592,7 @@ function App() {
       <footer className={`py-12 animate-fade-in transition-all duration-500 ${
         isDarkMode ? 'bg-black text-white' : 'bg-black text-white'
       }`}>
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-4 mb-6 animate-bounce-slow">
